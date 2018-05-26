@@ -17,7 +17,7 @@ shuffledTrainingCombined= trainingCombined(randperm(size(trainingCombined,1)),:)
 shuffledTestCombined= testCombined(randperm(size(testCombined,1)),:);
 emgShuffled = [shuffledTrainingCombined(:,1:10);shuffledTestCombined(:,1:10)];
 disp(size(emgShuffled));
-save('PreProccessed/test/emgShuffled.mat', 'emgShuffled');
+save('PreProccessed/combinedFunctional/emgShuffled.mat', 'emgShuffled');
 yShuffled = [shuffledTrainingCombined(:,11);shuffledTestCombined(:,11)];
 
 yShuffled(yShuffled == 1) = 1;
@@ -33,7 +33,7 @@ yShuffled(yShuffled == 23) = 10;
 
 
 disp(size(yShuffled));
-save('PreProccessed/TestTest/yShuffled.mat', 'yShuffled');
+save('PreProccessed/combinedFunctional/yShuffled.mat', 'yShuffled');
 
 end
 

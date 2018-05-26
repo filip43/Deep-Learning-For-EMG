@@ -464,7 +464,7 @@ print ("Y_test shape: " + str(Y_test.shape))
 
 start = time.time()
 parameters = model(X_train, Y_train, X_test, Y_test, learning_rate = 0.001,
-          num_epochs = 300, minibatch_size = 256, print_cost = True, layer1Size=256, layer2Size=256, layer3Size = 128, keep_probability = 0.7, epoch_cost_starting = 0.1)
+          num_epochs = 300, minibatch_size = 256, print_cost = True, layer1Size=256, layer2Size=256, layer3Size = 128, keep_probability = 0.5, epoch_cost_starting = 0.2)
 
 end =time.time()
 
