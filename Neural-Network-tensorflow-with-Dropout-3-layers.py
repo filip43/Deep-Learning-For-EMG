@@ -449,7 +449,7 @@ def model(X_train, Y_train, X_test, Y_test, learning_rate,
 
 
 
-X_train_orig, Y_train_orig, X_test_orig, Y_test_orig = load_dataset("PreProccessed/combinedFunctional/", NoZero = True)
+X_train_orig, Y_train_orig, X_test_orig, Y_test_orig = load_dataset("PreProccessed/FewerCombinedFunctionalMyo/", NoZero = True)
 
 # ##Convert all the labels to one-hot vector and flatten the EMG values AND SAY HOW MANY CLASSES SUPER IMPORTANT
 no_of_classes = int(np.max(Y_train_orig)+1)
@@ -464,7 +464,7 @@ print ("Y_test shape: " + str(Y_test.shape))
 
 start = time.time()
 parameters = model(X_train, Y_train, X_test, Y_test, learning_rate = 0.001,
-          num_epochs = 300, minibatch_size = 256, print_cost = True, layer1Size=256, layer2Size=256, layer3Size = 128, keep_probability = 0.5, epoch_cost_starting = 0.2)
+          num_epochs = 1200, minibatch_size = 256, print_cost = True, layer1Size=256, layer2Size=256, layer3Size = 128, keep_probability = 0.79, epoch_cost_starting = 0.15)
 
 end =time.time()
 
